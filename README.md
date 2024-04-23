@@ -33,7 +33,9 @@ Behavioral patterns focus on communication between objects, how they collaborate
 
 - Strategy Pattern: Defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
 
-- Command Pattern: Encapsulates a request as an object, thereby allowing for parameterization of clients with queues, requests, and operations.
+- **Command Pattern:** Encapsulates a request as an object, thereby allowing for parameterization of clients with queues, requests, and operations.
+    Use Cases:
+    
 
 - State Pattern: Allows an object to alter its behavior when its internal state changes. The object will appear to change its class.
 
