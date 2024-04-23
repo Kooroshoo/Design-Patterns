@@ -36,6 +36,7 @@ Behavioral patterns focus on communication between objects, how they collaborate
 - **Command Pattern:** Encapsulates a request as an object, thereby allowing for parameterization of clients with queues, requests, and operations.
 
     **Use Cases:**
+  
       1. Objects used as callbacks
   
       2. Can 'store' or 'enqueue' commands.
