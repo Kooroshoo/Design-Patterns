@@ -37,7 +37,9 @@ Behavioral patterns focus on communication between objects, how they collaborate
 
     **Use Cases:**
       1. Objects used as callbacks
+  
       2. Can 'store' or 'enqueue' commands.
+  
       3. Used for Undo/Redo systems
     
 - State Pattern: Allows an object to alter its behavior when its internal state changes. The object will appear to change its class.
