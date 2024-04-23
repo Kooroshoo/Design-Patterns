@@ -35,9 +35,11 @@ Behavioral patterns focus on communication between objects, how they collaborate
 
 - **Command Pattern:** Encapsulates a request as an object, thereby allowing for parameterization of clients with queues, requests, and operations.
 
-    Use Cases:
+    **Use Cases:**
+      1. Objects used as callbacks
+      2. Can 'store' or 'enqueue' commands.
+      3. Used for Undo/Redo systems
     
-
 - State Pattern: Allows an object to alter its behavior when its internal state changes. The object will appear to change its class.
 
 - Memento Pattern: Captures and externalizes an object's internal state so that the object can be restored to this state later without violating encapsulation.
