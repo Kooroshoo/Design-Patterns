@@ -13,7 +13,6 @@ Creational patterns deal with object creation mechanisms, trying to create objec
 
 - Prototype Pattern: Creates new objects by copying an existing object, known as the prototype, instead of creating new instances.
   
-#
 
 ## Structural Patterns:
 Structural patterns deal with object composition or, in simpler terms, with how classes and objects are composed to form larger structures.
@@ -26,7 +25,6 @@ Structural patterns deal with object composition or, in simpler terms, with how 
 
 - Proxy Pattern: Provides a surrogate or placeholder for another object to control access to it.
   
-#
 
 ## Behavioral Patterns:
 Behavioral patterns focus on communication between objects, how they collaborate, and how responsibilities are divided between them.
@@ -43,7 +41,6 @@ Behavioral patterns focus on communication between objects, how they collaborate
 
 - Template Method Pattern: Defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.
 
-#
 
 
 
