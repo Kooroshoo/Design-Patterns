@@ -33,7 +33,17 @@ Creational patterns deal with object creation mechanisms, trying to create objec
 
 - Abstract Factory Pattern: Provides an interface for creating families of related or dependent objects without specifying their concrete classes.
 
-- Builder Pattern: Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
+- **Builder Pattern**: Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
+
+  ![image](https://github.com/Kooroshoo/Design-Patterns/assets/26629624/7f4519e3-e50c-4bb0-b8f9-5eae7547d61f)
+
+
+          **Use Cases:**
+  
+      1. Like the Factory Method Pattern but with more control 
+
+      2. constructing complex objects with step-by-step construction processes
+  
 
 - Prototype Pattern: Creates new objects by copying an existing object, known as the prototype, instead of creating new instances.
   
