@@ -9,16 +9,24 @@ Creational patterns deal with object creation mechanisms, trying to create objec
 
       **Use Cases:**
   
-      1. A class has only one instance
+      1. Ensuring a single instance of the object is maintained.
 
-      2. Provide a global point of access to that instance
+      2. Offering a centralized access point to that instance across the application.
   
-      3. Used for logging/Database Connection/State Management
+      3. Employed in scenarios like logging, database connections, and state management.
 
 
 - **Factory Method Pattern**: Defines an interface for creating an object, but allows subclasses to alter the type of objects that will be created.
 
   ![image](https://github.com/Kooroshoo/Design-Patterns/assets/26629624/bb8357b1-e2a6-487c-b808-041f0072e0c9)
+
+        **Use Cases:**
+  
+      1. Used for abstraction
+
+      2. Enforcing Constraints on Object Creation
+  
+      3. Dynamic Object Creation
 
 
 - Abstract Factory Pattern: Provides an interface for creating families of related or dependent objects without specifying their concrete classes.
