@@ -1,61 +1,35 @@
 #include <iostream>
-#include <memory>
 
-// Abstract Product
-class Product {
+class Singleton {
 public:
-    virtual void operation() = 0;
-    virtual ~Product() {}
-};
-
-// Concrete Products
-class ConcreteProductA : public Product {
-public:
-    void operation() override {
-        std::cout << "ConcreteProductA operation\n";
+    // Static method to get the singleton instance
+    static Singleton& getInstance() {
+        // Lazy initialization - instance is created on first use
+        static Singleton instance;
+        return instance;
     }
-};
 
-class ConcreteProductB : public Product {
-public:
-    void operation() override {
-        std::cout << "ConcreteProductB operation\n";
-    }
-};
+    // Delete copy constructor and assignment operator
+    Singleton(const Singleton&) = delete;
+    void operator=(const Singleton&) = delete;
 
-// Abstract Creator
-class Creator {
-public:
-    virtual std::unique_ptr<Product> factoryMethod() = 0;
-    void someOperation() {
-        std::unique_ptr<Product> product = factoryMethod();
-        product->operation();
+    // Sample method of the singleton class
+    void someMethod() {
+        std::cout << "Singleton method called\n";
     }
-    virtual ~Creator() {}
-};
 
-// Concrete Creators
-class ConcreteCreatorA : public Creator {
-public:
-    std::unique_ptr<Product> factoryMethod() override {
-        return std::make_unique<ConcreteProductA>();
-    }
-};
-
-class ConcreteCreatorB : public Creator {
-public:
-    std::unique_ptr<Product> factoryMethod() override {
-        return std::make_unique<ConcreteProductB>();
-    }
+private:
+    // Private constructor to prevent instantiation
+    Singleton() {}
 };
 
 int main() {
-    // Client code
-    std::unique_ptr<Creator> creatorA = std::make_unique<ConcreteCreatorA>();
-    creatorA->someOperation();
+    // Accessing the singleton instance
+    Singleton& singletonInstance = Singleton::getInstance();
+    singletonInstance.someMethod();
 
-    std::unique_ptr<Creator> creatorB = std::make_unique<ConcreteCreatorB>();
-    creatorB->someOperation();
+    // Trying to create another instance (will not compile)
+    // Singleton anotherInstance = Singleton::getInstance(); // Compilation error
 
     return 0;
 }
