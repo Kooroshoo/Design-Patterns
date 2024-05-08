@@ -3,7 +3,9 @@
 ## Creational Patterns:
 Creational patterns deal with object creation mechanisms, trying to create objects in a manner suitable to the situation. They abstract the instantiation process and make the system independent of how its objects are created, composed, and represented.
 
-- Singleton Pattern: Ensures that a class has only one instance and provides a global point of access to that instance.
+- **Singleton Pattern**: Ensures that a class has only one instance and provides a global point of access to that instance.
+  ![image](https://github.com/Kooroshoo/Design-Patterns/assets/26629624/ce344f35-22dd-4566-a0a9-5b87b3417807)
+
 
 - Factory Method Pattern: Defines an interface for creating an object, but allows subclasses to alter the type of objects that will be created.
 
