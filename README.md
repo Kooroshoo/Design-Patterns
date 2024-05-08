@@ -28,6 +28,8 @@ Creational patterns deal with object creation mechanisms, trying to create objec
   
       3. Dynamic Object Creation
 
+      4. Extensibility and Customization
+
 
 - Abstract Factory Pattern: Provides an interface for creating families of related or dependent objects without specifying their concrete classes.
 
