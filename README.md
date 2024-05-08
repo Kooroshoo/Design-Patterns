@@ -7,8 +7,16 @@ Creational patterns deal with object creation mechanisms, trying to create objec
   
   ![image](https://github.com/Kooroshoo/Design-Patterns/assets/26629624/ce344f35-22dd-4566-a0a9-5b87b3417807)
 
+      **Use Cases:**
+  
+      1. A class has only one instance
 
-- Factory Method Pattern: Defines an interface for creating an object, but allows subclasses to alter the type of objects that will be created.
+      2. Provide a global point of access to that instance
+  
+      3. Used for logging/Database Connection/State Management
+
+
+- **Factory Method Pattern**: Defines an interface for creating an object, but allows subclasses to alter the type of objects that will be created.
 
   ![image](https://github.com/Kooroshoo/Design-Patterns/assets/26629624/bb8357b1-e2a6-487c-b808-041f0072e0c9)
 
