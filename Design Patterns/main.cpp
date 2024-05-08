@@ -1,35 +1,69 @@
 #include <iostream>
+#include <string>
 
-class Singleton {
+// Product class
+class Burger {
 public:
-    // Static method to get the singleton instance
-    static Singleton& getInstance() {
-        // Lazy initialization - instance is created on first use
-        static Singleton instance;
-        return instance;
+    void setBuns(const std::string& bunStyle) {
+        m_buns = bunStyle;
+    }
+    void setPatty(const std::string& pattyStyle) {
+        m_patty = pattyStyle;
+    }
+    void setCheese(const std::string& cheeseStyle) {
+        m_cheese = cheeseStyle;
     }
 
-    // Delete copy constructor and assignment operator
-    Singleton(const Singleton&) = delete;
-    void operator=(const Singleton&) = delete;
-
-    // Sample method of the singleton class
-    void someMethod() {
-        std::cout << "Singleton method called\n";
+    void showBurger() {
+        std::cout << "Burger with " << m_buns << " buns, " << m_patty << " patty, and " << m_cheese << " cheese\n";
     }
 
 private:
-    // Private constructor to prevent instantiation
-    Singleton() {}
+    std::string m_buns;
+    std::string m_patty;
+    std::string m_cheese;
+};
+
+// Builder class
+class BurgerBuilder {
+public:
+    BurgerBuilder() {
+        m_burger = new Burger();
+    }
+
+    BurgerBuilder* addBuns(const std::string& bunStyle) {
+        m_burger->setBuns(bunStyle);
+        return this;
+    }
+
+    BurgerBuilder* addPatty(const std::string& pattyStyle) {
+        m_burger->setPatty(pattyStyle);
+        return this;
+    }
+
+    BurgerBuilder* addCheese(const std::string& cheeseStyle) {
+        m_burger->setCheese(cheeseStyle);
+        return this;
+    }
+
+    Burger* build() {
+        return m_burger;
+    }
+
+private:
+    Burger* m_burger;
 };
 
 int main() {
-    // Accessing the singleton instance
-    Singleton& singletonInstance = Singleton::getInstance();
-    singletonInstance.someMethod();
+    Burger* burger = (new BurgerBuilder())
+        ->addBuns("sesame")
+        ->addPatty("fish-patty")
+        ->addCheese("swiss cheese")
+        ->build();
 
-    // Trying to create another instance (will not compile)
-    // Singleton anotherInstance = Singleton::getInstance(); // Compilation error
+    burger->showBurger();
+
+    delete burger;
 
     return 0;
 }
